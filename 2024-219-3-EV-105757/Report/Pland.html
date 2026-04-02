@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    /* Styling for the navigation bar */
+    nav {
+      background-color: #F1DEB3;
+      height: 60px;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
+      overflow: hidden;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    nav ul li {
+      position: relative;
+      margin-right: 20px;
+      padding: 5px 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li:hover a {
+      color: #FF6700
+;
+    }
+
+    nav ul li::before {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #FF6700
+;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    nav ul li:hover::before {
+      transform: scaleX(1);
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Meeting the brief</a></li>
+      <li><a href="GSMarena.html">Investigation</a></li>
+      <li><a href="Pland.html">Plan and design</a></li>
+      <li><a href="contact.html">Create</a></li>
+      <li><a href="Evaluation.html">Evaluation</a></li>
+      <li><a href="Refrences.html">Refrences</a></li>
+    </ul>
+  </nav>
+
+  <h1>Approach Used</h1>
+  <p>Agile approach was used as I kept coming back to review my steps and had great flexibility in what to change and what to fix in my approach.</p>
+
+  <h1>Design and how I met user Requirements and mentioning what Technologies I planned to use and did actually use</h1>
+  <p>My project emphasized minimalism and user-friendliness, beginning with users inputting their weight and height on Google Sheets to determine their BMI. This approach aligns with user requirements by monitoring health categories and providing tailored tips while warning users of health risks associated with high weight, such as strokes and heart attacks. Additionally, the project sets a 10,000-step goal for users, prompting them to assess goal achievement and providing motivation if not met. Step tracking is facilitated through Thonny or the Micro:bit device, which displays step counts with each step taken.</p>
+
+  <h1>Pseudo Code</h1>
+  <p>Imported serial, time, matplotlib,csv. From googleapiclient.discovery I imported build, from google.oauth2 I imported service_account.</p>
+  <p>Then authenticated with google API using service account credentials.</p>
+  <p>After that I Checked the user's BMI status and provided appropriate feedback.</p>
+  <p>Opened serial connection with Micro:bit.</p>
+  <p>Prompted the user to generate a graph.</p>
+  <p>If the user chooses to generate graph the program will do the following:</p>
+  <ul>
+    <li>Record start time.</li>
+    <li>Loop for 12 seconds:</li>
+    <ul>
+      <li>Read data from Micro:bit.</li>
+      <li>If data is BPM:</li>
+      <ul>
+        <li>Extract BPM value and add to bpm_values list.</li>
+        <li>Append current time to time_values list.</li>
+        <li>Store time, BPM, and steps data in data_list.</li>
+      </ul>
+      <li>If data is steps:</li>
+      <ul>
+        <li>Extract steps value and print.</li>
+        <li>If steps reach 5, send message to Micro:bit.</li>
+      </ul>
+      <li>Delay for 0.5 seconds between iterations.</li>
+    </ul>
+  </ul>
+  <p>Wrote collected data to a CSV file.</p>
+  <p>Calculated average BPM if bpm_values is not empty.</p>
+  <p>Prompted users to input whether it's the end of the day and if they've reached their daily goal.</p>
+  <p>Checked user's daily step goal status and provide appropriate feedback.</p>
+  <p>Then finally Closed serial connection with Micro:bit.</p>
+
+  <h1>How Modelling was Applied to My Code</h1>
+  <p>Data Analysis: I collected data from the pulse sensor and Micro:bit to track BPM and step count. Using Python, I analyzed this data to spot trends and patterns, like calculating average BPM over time when resting. Based on this data, I made decisions like congratulating the user for hitting their step goal.</p>
+  <p>Model Development: I developed a basic computer model to process health data and provide insights on improvement to be made. This model helped determine if users had an optimal BMI needed professional advice based on their health status.</p>
+  <p>Visualization: I used matplotlib to create graphs showing BPM change over time. These visuals made it easier to understand the data's significance.</p>
+  <p>My What-If Scenarios: I included what-if scenarios to evaluate different conditions. For instance, my model assessed if users achieved their step goals based on their input and current time.</p>
+  <p>Abstraction Application: Abstraction was applied by not asking about the user´s age, Gender, ethinicity, social status, Allergies, Diet, long term illness, name, gender, salary, what form of transport does the user as doing so might be irrelevant to my project and would not have any affect on the outputs.</p>
+
+  <!-- Pictures -->
+  <div class="picture-container">
+    <img src="agile.jpg" alt="Agile Approach">  
+    <h2>Advanced requirement for what if statement</h2>
+    <img src="Flowchart.png" alt="Flowchart">
+    <img src="hardwareused.png" alt="Hardware Used">
+  </div>
+</body>
+
+</html>

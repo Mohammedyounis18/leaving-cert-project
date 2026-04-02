@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    /* Styling for the navigation bar */
+    nav {
+      background-color: #F1DEB3;
+      height: 60px;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
+      overflow: hidden;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    nav ul li {
+      position: relative;
+      margin-right: 20px;
+      padding: 5px 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li:hover a {
+      color: #FF6700;
+    }
+
+    nav ul li::before {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #FF6700;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    nav ul li:hover::before {
+      transform: scaleX(1);
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Meeting the brief</a></li>
+      <li><a href="GSMarena.html">Investigation</a></li>
+      <li><a href="Pland.html">Plan and design</a></li>
+      <li><a href="contact.html">Create</a></li>
+      <li><a href="Evaluation.html">Evaluation</a></li>
+      <li><a href="Refrences.html">Refrences</a></li>
+    </ul>
+  </nav>
+
+  <div style="background-color: #f4eee0; border-radius: 10px; padding: 10px;">
+    <p style="margin-bottom: 20px;">Step goal and why 10K specifically: I choose 10,000 steps per day, which equates to walking about 5 miles, because it has been a benchmark health goal for a while. (Interesting fact: The number originated as part of a marketing campaign for an early step counter leading up to the 1964 Tokyo Olympics, and has become the adopted benchmark of daily step counts.Walking 10,000 steps daily will help you feel more focused, sharp and happier—leading to fewer feelings of physical tension, providing both mental and physical benefits," according to Rachel MacPherson, CPT, an American Council on Exercise-certified personal trainer with Garage Gym Reviews.</p>
+
+    <p>BMI: While NHS UK does the same thing of measuring BMI using the Weight and and height while still having a nice UI and user centered design, it is very annoying and asks weird questions about race and ethinicity which might discourage the user from finding out his BMI and completing the whole assessment. My solution gives you, your BMI in a float and assign a health category for you instantly based on your BMI without any Fuss and the user can find what his assigned health category is in seconds rather than having to find in a page full of very general and basic tips.</p>
+
+    <p>BPM: Existing solution like Fitbit exist and are able to monitor your heart´s beats per minute but are too expensive (150 euro and above) whereas my solution is super affordable and is very accessible. I found that the user might have difficulties navigating throughout the watch to find out his BPM in a Fitbit watch due to how complicated a Fitbit is, another benefit of using a Microbit and a pulse sensor to monitor BPM is the high energy efficiency of them.</p>
+
+    <p>Inspiration: I got my inspiration from my phone where I check my steps daily and always wonder how low my BPM is when I am resting and want to find out the relationship between doing 10000 steps and health and fitness and wellbeing. I also wanted to help user beat his struggle, for example if they are underweight, they get useful tips on how to bulk and what to do next i.e. inform them about future wellbeing decisions.</p>
+  </div>
+
+  <!-- Images at the bottom of the page -->
+  <h2 style="text-align: center; margin-top: 20px;">Existing solutions</h2>
+  <div style="display: flex; justify-content: space-between;">
+    <img src="Existing solutions 1.jpg" alt="Existing Solution" style="max-width: 25%; height: auto;">
+    <img src="stepcounterpic.jpg" alt="Existing Solution" style="max-width: 25%; height: auto;">
+    <img src="IMG_20240314_141551.jpg"  style="max-width: 25%; height: auto;">
+    <img src="IMG_20240314_141607.jpg"  style="max-width: 25%; height: auto;">
+  </div>
+
+  <!-- New image on the right side -->
+  <img src="BMIcalc.jpg" alt="BMI Calculator" style="float: right; max-width: 20%; margin-top: 20px;">
+   <h2 style="text-align: center;margin-top: 20px">Questionnaire</h2>
+  <img src="IMG_1181.jpg" alt="Questionnare" style="width: 50%; height: auto;">
+</body>
+
+</html>

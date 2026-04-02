@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improved Text Layout</title>
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            color: #0B4E52;
+            font-size: 16px; /* Set default font size */
+        }
+
+        p {
+            font-size: 1.2em; /* Increase paragraph font size */
+            line-height: 1.6; /* Add spacing between lines */
+            text-align: justify; /* Justify text for better readability */
+        }
+
+        a {
+            font-family: "Helvetica", sans-serif;
+            color: darkgoldenrod;
+            font-size: 20px;
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        a:hover {
+            color: #FFD700; /* Change link color on hover */
+        }
+
+        .right-image {
+            float: right;
+            margin-left: 20px;
+            max-width: 10%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<p>I met the brief by making my embedded system fully automated as it does not require the user to change the code. My embedded system utilizes digital inputs by asking the user to input his Weight and Height to have his BMI calculated, my analogue input would be the steps that are inputted by the user every time the user shake the microbit whereas the analogue output would be the steps counter that can be read everytime you shake the microbit I validated all the data by having them being read as floats and not strings. I also stored all my data in a CSV file. I also analyzed the data coming in from the pulse sensor and divided it by 10 to give me a BPM value and I averaged the BPM values coming in to give a predicted future BPM value. I informed the user about future wellbeing decision, where I asked them if they did 10,000 steps today, e.g. if they said yes and actually did 10K they'll be treated with a message telling them that they actually achieved their daily goal and will get a congratulations message. I obtained a data set with multiple wellbeing factors being Weight, height, beats per minute (BPM). I have created a model using data as seen in my code where I have made specific outputs for specific inputs. My two what if statements are when I asked if they met their daily activity goal (steps) and health expectations. My code has more than 2 different data types as demonstrated below:</p>
+
+<ul>
+    <li>Numeric Data Types: I used numeric data types when comparing values, such as when comparing float values in conditions like float(column_data[2][1]) < 25 and float(column_data[0][1]) < 50. Additionally, I used integer data types when extracting and comparing steps values, such as in steps == 5.</li>
+    <li>String Data Types: I used string data types when checking conditions involving string comparisons, such as in column_data[3][1] == "Healthy" and what_if_question2 == "no".</li>
+    <li>List Data Type: I also used list data types to store multiple values. For example, column_data is a list that stores data retrieved from a spreadsheet.</li>
+    <li>Boolean Data Type: Implicitly, I used boolean data types in conditions that evaluate to either True or False, such as in what_if_question2 == "yes" or what_if_question2 == "no".</li>
+</ul>
+
+
+</body>
+</html>
